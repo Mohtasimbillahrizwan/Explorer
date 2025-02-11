@@ -1,0 +1,200 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header */
+header {
+  position: relative;
+  background-color: #1980db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #296ec1;
+}
+
+/* Logo */
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  
+}
+/* 
+.logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+} */
+
+#topLeftText {
+  font-weight: bolder;
+  font-size: 14px;
+  color: whitesmoke;
+  background-color: #1c93d3;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  /* margin-left: 40px; */
+}
+
+/* Main Content */
+.content-container {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  text-align: center;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.grid-item {
+  border: 1px solid #ddd;
+  padding: 5px;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+}
+
+/* Image & Video Styling */
+.grid-container img,
+.grid-container video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #1fd9e6;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #ddd5d5;
+  padding: 10px 0;
+  z-index: 100;
+}
+
+/* Navigation Buttons */
+.nav-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 12px;
+  color: whitesmoke;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-button img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Hover & Active State */
+.nav-button:hover {
+  background-color: #0056b3;
+  color: white;
+  transform: scale(1.05);
+}
+
+.nav-button.active {
+  color: #e8e5e0;
+}
+
+ Fullscreen Modal
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.fullscreen-content {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* Hide modal when clicking outside */
+
+
+.modal:target {
+  display: flex;
+} 
+
+/* Fullscreen Modal (Google Pixel Screen Size) */
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 412px; /* Google Pixel 7 width */
+  height: 915px; /* Google Pixel 7 height */
+  background-color: rgba(0, 0, 0, 0.95);
+  transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.modal-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullscreen-content {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Hide modal when clicking outside */
+.modal:target {
+  display: flex;
+}
